@@ -15,15 +15,46 @@ https://x.com/nihui/status/1864892917300760905
 
 
 ## opencv-mobile build
-jpg-streamingのブランチをダウンロードしてﾋﾞﾙﾄﾞを行います。
-Download and build the jpg-streaming branch.
+jpg-streamingのブランチをダウンロードします。
 
 ```
 $ git clone https://github.com/nihui/opencv-mobile.git -b jpg-streaming
+```
+
+こちらのスクリプトをダウンロードして、OpenCVにパッチを当てます。
+
+```
 $ cd opencv-mobile
 $ curl -O https://raw.githubusercontent.com/nnn112358/opencv-mobile_jpg-streaming_test/main/opencv-mobile-build.sh
 $ chmod +x opencv-mobile-build.sh
 ```
+
+
+
+```
+$ cd opencv-mobile-4.10.0
+$ cmake -B build/x64 -DCMAKE_TOOLCHAIN_FILE=../toolchains/aarch64-linux-gnu.toolchain.cmake \
+    `cat ./options.txt` -DBUILD_opencv_world=OFF .
+$ cmake --build build/x64
+$ cmake --install build/x64 --prefix install/aarch64-linux-gnu
+```
+
+
+
+```
+$ cmake -B build/aarch64 -DCMAKE_TOOLCHAIN_FILE=../toolchains/aarch64-linux-gnu.toolchain.cmake \
+    `cat ./options.txt` -DBUILD_opencv_world=OFF .
+$ cmake --build build/aarch64
+$ cmake --install build/aarch64 --prefix install/aarch64-linux-gnu
+```
+
+
+
+
+
+
+
+
 
 
 
