@@ -1,14 +1,14 @@
 # opencv-mobile_jpg-streaming_test
 
 ## abst
-opencv-mobileにjpg-streamingというものがあります。
-これはopencv-mobileのpull/161で開発のものです。
-こちらは現在、開発者のnihui氏によって、APIの調整や最適化を行われている最中で実装途中のものとなります。
-先行して、opencv-mobileのhttp jpg streaming ビルドし、お試しました。
+opencv-mobileにjpg-streamingというものがあります。<br>
+これはopencv-mobileのpull/161で開発のものです。<br>
+こちらは現在、開発者のnihui氏によって、APIの調整や最適化を行われている最中で実装途中のものとなります。<br>
+先行して、opencv-mobileのhttp jpg streaming ビルドし、お試しました。<br>
 
 
-https://github.com/nihui/opencv-mobile/pull/161
-https://x.com/nihui/status/1864892917300760905
+https://github.com/nihui/opencv-mobile/pull/161<br>
+https://x.com/nihui/status/1864892917300760905<br>
 
 ## Enviroment
 
